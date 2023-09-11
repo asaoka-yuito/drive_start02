@@ -8,12 +8,14 @@
 
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%# rails6 bootstrap4を使用、アセットパイプラインのままwebpackerには変更しない（css） %>
   </head>
 
   <body>
-    
-    <%= render 'shared/header' %>
+    <% if logged_in? %>
+      <%= render 'shared/header' %><%# ログイン中 %>
+    <% else %>
+      <%= render 'shared/before_login_header' %><%# ログアウト中 %>
+    <% end %> 
 
     <%= yield %>
 
