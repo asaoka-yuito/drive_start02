@@ -1,0 +1,16 @@
+# モデル名 各属性
+# 数にモデルを渡していないform_withのlabelでは、i18nの記載を追加する必要があり
+# User.human_attribute_name(:email)のような
+# ○○.human_attribute_name(○○)
+ja:
+  activerecord:
+    models:
+      user: 'ユーザー'
+      post: '掲示板'
+    attributes:
+      user:
+        email: 'メールアドレス'
+        password: 'パスワード'
+        password_confirmation: 'パスワード確認'
+        last_name: '姓'
+        first_name: '名'

@@ -62,3 +62,5 @@ gem 'jquery-rails'
 gem 'font-awesome-sass', '~> 5.12.0'
 
 gem 'sorcery'
+
+gem 'rails-i18n', '~> 6.0.0'

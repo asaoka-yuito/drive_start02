@@ -1,6 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+      <%# model が渡されているので追加情報は必要ない。 %>
       <%= form_with model: @user, local: true, autocomplete: 'off' do |f| %>
         <div class="form-group">
           <%= f.label :first_name, "苗字" %>
