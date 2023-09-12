@@ -57,10 +57,14 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'jquery-rails'
 
-# gem 'bootstrap', '~> 4.5.1'
-
+# フォント追加
 gem 'font-awesome-sass', '~> 5.12.0'
 
+# ユーザーログイン機能追加
 gem 'sorcery'
 
+# 翻訳機能追加
 gem 'rails-i18n', '~> 6.0.0'
+
+# デコレーター追加
+gem 'draper'
