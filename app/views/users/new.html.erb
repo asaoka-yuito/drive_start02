@@ -27,6 +27,7 @@
         <div class="actions">
           <%= f.submit class: "btn btn-primary" %>
         </div> 
+        <%= current_user.decorate.full_name %>
      <% end %>
      <div class='text-center'>
        <%= link_to 'ログインページへ', new_user_path %>

@@ -5,7 +5,7 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <div class="collapse navbar-collapse " id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
         <li>
           <%= link_to root_path,class: 'nav-link text-light' do %>
@@ -13,9 +13,20 @@
           <% end %>
         </li>
         <li>
-          <%=  link_to root_path,class: 'nav-link text-light' do %>
-            <i class="fas fa-users"></i> Top
-          <% end %>
+          <%# ドロップダウン %>
+          <div class="dropdown mt-1">
+            <button class="btn btn-whiht text-white btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              ユーザーログイン
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <li>
+                <%= link_to current_user.decorate.full_name , root_path, class: 'dropdown-item' %>
+              </li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </div>  
+          <%# ドロップダウン終了 %>
         </li>
         <li>
           <%=  link_to root_path,class: 'nav-link text-light' do %>
