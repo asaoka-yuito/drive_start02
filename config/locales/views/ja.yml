@@ -13,6 +13,10 @@ ja:
       title: 'ログイン'
       to_register_page: '登録ページへ'
       password_forget: 'パスワードをお忘れの方はこちら'
+    create:
+      login: 'ログインに成功しました'
+      login_failed: 'ログインに失敗しました'
+      logout: 'ログアウトしました'
   boards:
     index:
       title: '掲示板一覧'

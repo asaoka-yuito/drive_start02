@@ -6,11 +6,17 @@ ja:
   activerecord:
     models:
       user: 'ユーザー'
+      user_sessions: 'ユーザーログイン'
       post: '掲示板'
     attributes:
       user:
         email: 'メールアドレス'
         password: 'パスワード'
         password_confirmation: 'パスワード確認'
-        last_name: '姓'
-        first_name: '名'
+        last_name: '名前'
+        first_name: '苗字'
+        submit: 登録
+      user_sessions:
+        login: 'ログインに成功しました'
+        login_failed: 'ログインに失敗しました'
+        logout: 'ログアウトしました'

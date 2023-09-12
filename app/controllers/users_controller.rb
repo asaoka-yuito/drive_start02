@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  skip_before_action :require_login, only: %i[ new ]
+  skip_before_action :require_login, only: %i[ create new ]
   
   def new
     @user = User.new
@@ -11,7 +11,7 @@ class UsersController < ApplicationController
       redirect_to login_path 
       flash[:notice] = "ユーザーの作成に成功しました"
     else
-      flash.now[:alert] = "ユーザーの作成に失敗しました"
+      flash.now[:danger] = "ユーザーの作成に失敗しました"
       render :new
     end
   end
