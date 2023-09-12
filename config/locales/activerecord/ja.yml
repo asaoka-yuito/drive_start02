@@ -16,7 +16,4 @@ ja:
         last_name: '名前'
         first_name: '苗字'
         submit: 登録
-      user_sessions:
-        login: 'ログインに成功しました'
-        login_failed: 'ログインに失敗しました'
-        logout: 'ログアウトしました'
+    
