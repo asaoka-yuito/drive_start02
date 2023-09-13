@@ -9,6 +9,6 @@ class ApplicationController < ActionController::Base
   private
   # ログインをしていない場合の処理
   def not_authenticated
-    redirect_to login_path, danger: 'ログインしてください。'
+    redirect_to login_path, warning: t('defaults.message.require_login')
   end
 end

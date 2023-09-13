@@ -22,8 +22,12 @@
               <li>
                 <%= link_to current_user.decorate.full_name , root_path, class: 'dropdown-item' %>
               </li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li>
+                <%= link_to t('posts.index.title'), posts_path, class: 'dropdown-item' %>
+              </li>
+              <li>
+                <%= link_to '掲示板作成', '#', class: 'dropdown-item' %>
+              </li>
             </ul>
           </div>  
           <%# ドロップダウン終了 %>
