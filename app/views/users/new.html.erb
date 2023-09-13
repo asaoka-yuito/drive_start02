@@ -4,6 +4,7 @@
       <%# model が渡されているので追加情報は必要ない。 %>
       <h1><%= t '.title' %></h1>
       <%= form_with model: @user, local: true do |f| %>
+        <%= render 'shared/error_messages', object: f.object %>
         <div class="form-group">
           <%= f.label :last_name %>
           <%= f.text_field :last_name, class: "form-control" %>
