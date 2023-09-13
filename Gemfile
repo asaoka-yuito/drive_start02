@@ -68,3 +68,6 @@ gem 'rails-i18n', '~> 6.0.0'
 
 # デコレーター追加
 gem 'draper'
+
+# フェイカー追加
+gem 'faker'
