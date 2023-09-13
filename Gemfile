@@ -71,3 +71,9 @@ gem 'draper'
 
 # フェイカー追加
 gem 'faker'
+
+# 画像処理
+gem "mini_magick"
+
+# 画像アップローダー追加
+gem 'carrierwave', '~> 3.0'

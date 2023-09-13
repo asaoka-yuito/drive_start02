@@ -16,4 +16,9 @@ ja:
         last_name: '苗字'
         first_name: '名前'
         submit: 登録
+      post: 
+        title: 'タイトル'
+        body: '本文'
+        post_image: 'サムネイル'
+        
     

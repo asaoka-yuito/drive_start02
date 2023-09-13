@@ -29,6 +29,7 @@ ja:
       title: '掲示板一覧'
       body: '本文'
       no_result: '掲示板がありません'
+      post_image: 'サムネイル'
     new:
       title: '掲示板作成'
     bookmarks:
