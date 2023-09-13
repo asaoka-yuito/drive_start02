@@ -10,6 +10,9 @@ ja:
     new:
       title: 'ユーザー登録'
       to_login_page: 'ログインページへ'
+    create:
+      signup: 'ユーザーの作成に成功しました'
+      signup_failed: 'ユーザーの作成に失敗'
   user_sessions:
     new:
       title: 'ログイン'
