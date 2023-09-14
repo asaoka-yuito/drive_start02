@@ -8,6 +8,7 @@ ja:
       user: 'ユーザー'
       user_sessions: 'ユーザーログイン'
       post: '掲示板'
+      comment: 'コメント'
     attributes:
       user:
         email: 'メールアドレス'
@@ -20,5 +21,9 @@ ja:
         title: 'タイトル'
         body: '本文'
         post_image: 'サムネイル'
+      comment:
+        body: 'コメント'
+        created: 'コメントしました'
+        not_created: 'コメントに失敗しました'
         
     
