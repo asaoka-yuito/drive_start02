@@ -4,7 +4,7 @@ ja:
     login: 'ログイン'
     register: '登録'
     logout: 'ログアウト'
-    post: 'コメントする'
+    post: '投稿'
     message:
       require_login: 'ログインしてください。'
       created: '投稿しました'
