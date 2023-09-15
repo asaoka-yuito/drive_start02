@@ -9,6 +9,10 @@ ja:
       require_login: 'ログインしてください。'
       created: '投稿しました'
       not_created: '投稿に失敗しました'
+      updated: "%{item}を更新しました"
+      not_updated: "%{item}を更新できませんでした"
+      deleted: "%{item}を削除しました"
+      delete_confirm: '削除しますか？'
   static_pages:
     top: 
       title: 'トップ'
