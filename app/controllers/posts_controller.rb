@@ -44,7 +44,7 @@ class PostsController < ApplicationController
   # bookmark機能
 
   def bookmarks
-    @bookmark_boards = current_user.bookmark_posts.includes(:user).order(created_at: :desc)
+    @bookmark_posts = current_user.bookmark_posts.includes(:user).order(created_at: :desc)
   end 
 
   private

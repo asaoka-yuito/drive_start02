@@ -9,6 +9,7 @@ ja:
       user_sessions: 'ユーザーログイン'
       post: '掲示板'
       comment: 'コメント'
+      bookmarks: 'ブックマーク'
     attributes:
       user:
         email: 'メールアドレス'
@@ -25,5 +26,7 @@ ja:
         body: 'コメント'
         created: 'コメントしました'
         not_created: 'コメントに失敗しました'
-        
+      bookmarks:
+        bookmarks:
+          no_result: 'ブックマークがありません'    
     

@@ -46,6 +46,7 @@ ja:
       title: '掲示板詳細'
     bookmarks:
       title: 'ブックマーク一覧'
+      no_result: 'ブックマークはありません'
   profiles:
     show:
       title: 'プロフィール'
