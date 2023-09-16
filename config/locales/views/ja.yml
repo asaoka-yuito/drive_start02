@@ -13,6 +13,8 @@ ja:
       not_updated: "%{item}を更新できませんでした"
       deleted: "%{item}を削除しました"
       delete_confirm: '削除しますか？'
+      bookmark: 'ブックマークしました'
+      unbookmark: 'ブックマーク解除しました'
   static_pages:
     top: 
       title: 'トップ'
