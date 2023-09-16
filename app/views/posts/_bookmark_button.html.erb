@@ -1,0 +1,8 @@
+<%# ブックマークボタン表示 %>
+<% if current_user.bookmark?(post) %>
+  <%# ブックマーク削除ボタン %>
+  <%= render 'unbookmark', { post: post } %>
+<% else %>
+  <%# ブックマークボタン %>
+  <%= render 'bookmark', { post: post } %>
+<% end %>

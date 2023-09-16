@@ -1,0 +1,7 @@
+<!-- 掲示板一覧 -->
+<% if @bookmark_posts.present? %> 
+  <%= render @bookmark_posts %>
+<% else %>
+  <p><%= t('bookmarks.bookmarks.no_result') %></p>
+<% end %>
+ 
