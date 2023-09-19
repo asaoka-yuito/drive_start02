@@ -1,0 +1,4 @@
+<%# ajax ブックマークの実装 %>
+<%# $(置換対象).replaceWith(置換後の要素)を利用 %>
+<%# escape_javascriptの確認 %>
+$("#js-bookmark-button-for-post-<%= @post.id %>").replaceWith("<%= j(render('posts/unbookmark', post: @post)) %>");

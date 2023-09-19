@@ -7,17 +7,12 @@ class BookmarksController < ApplicationController
   # paramsは頭が混乱するので,、設定したルーティングとurlを意識する
 
   def create
-    post = Post.find(params[:post_id])
-    current_user.bookmark(post)
-    redirect_back fallback_location: root_path, success: t('defaults.message.bookmark')
+    @post = Post.find(params[:post_id])
+    current_user.bookmark(@post)
   end
 
   def destroy
-    post = current_user.bookmarks.find(params[:id]).post
-    current_user.unbookmark(post)
-    redirect_back fallback_location: root_path, success: t('defaults.message.unbookmark')
+    @post = current_user.bookmarks.find(params[:id]).post
+    current_user.unbookmark(@post)
   end
-
-  # redirect_back fallback_location: root_pathでユーザーを直前のページに戻せる 
-
 end
