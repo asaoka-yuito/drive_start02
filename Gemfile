@@ -77,3 +77,6 @@ gem "mini_magick"
 
 # 画像アップローダー追加
 gem 'carrierwave', '~> 3.0'
+
+# デバッグ
+gem 'pry-rails'
