@@ -14,8 +14,7 @@
       <button class="btn btn-success js-button-comment-update" data-comment-id="<%= comment.id %>">更新</button>
     </div>
   </td>
-  
-  
+
   <%# コメントした本人だけ削除可能 %>
   <% if current_user.own?(comment) %>
     <td class="action">
