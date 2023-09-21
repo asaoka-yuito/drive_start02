@@ -80,3 +80,6 @@ gem 'carrierwave', '~> 3.0'
 
 # デバッグ
 gem 'pry-rails'
+
+# ページネーション
+gem 'kaminari'
