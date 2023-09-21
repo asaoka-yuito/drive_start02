@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: %i[edit update destroy]
 
   def index
-  	@posts = Post.all.includes(:user).order(created_at: :desc)
+  	@posts = Post.all.includes(:user).order(created_at: :desc).page(params[:page])
   end
 
   def new 
@@ -44,7 +44,7 @@ class PostsController < ApplicationController
   # bookmark機能
 
   def bookmarks
-    @bookmark_posts = current_user.bookmark_posts.includes(:user).order(created_at: :desc)
+    @bookmark_posts = current_user.bookmark_posts.includes(:user).order(created_at: :desc).page(params[:page])
   end 
 
   private
