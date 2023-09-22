@@ -83,3 +83,6 @@ gem 'pry-rails'
 
 # ページネーション
 gem 'kaminari'
+
+# 検索機能の追加
+gem 'ransack'
