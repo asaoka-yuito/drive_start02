@@ -1,0 +1,4 @@
+# 本番環境用
+default_url_options:
+  protcol: 'https'
+  host: 'example.com'
