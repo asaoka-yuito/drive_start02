@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'password_resets/new'
+  get 'password_resets/create'
+  get 'password_resets/edit'
+  get 'password_resets/update'
   get 'bookmarks/create'
   get 'bookmarks/destroy'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

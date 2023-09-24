@@ -13,7 +13,7 @@ class User < ApplicationRecord
   validates :email, uniqueness: true, presence: true
   validates :last_name, presence: true, length: { maximum: 255 }
   validates :first_name, presence: true, length: { maximum: 255 }
-
+  validates :reset_password_token, presence: true, uniqueness: true, allow_nil: true
 
   #  コメントした本人だけ削除可能
   # インスタンスメソッド
