@@ -6,6 +6,11 @@ class BookmarksController < ApplicationController
   # コードが分からなかったので、rails consoleで試してみた。疑問があったら試す癖をつけたい。
   # paramsは頭が混乱するので,、設定したルーティングとurlを意識する
 
+  def bookmarks
+    @q = current_user.bookmark_boards.ransack(params[:q])
+    @bookmark_boards = @q.result(distinct: true).includes(:user).order(created_at: :desc).page(params[:page])
+  end
+  
   def create
     @post = Post.find(params[:post_id])
     current_user.bookmark(@post)
