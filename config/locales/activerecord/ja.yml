@@ -18,6 +18,9 @@ ja:
         last_name: '苗字'
         first_name: '名前'
         submit: 登録
+      user_sessions:
+        title: 'パスワードリセット画面'
+        
       post: 
         title: 'タイトル'
         body: '本文'
