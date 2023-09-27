@@ -56,4 +56,12 @@ ja:
       no_result: 'ブックマークはありません'
   profiles:
     show:
-      title: 'プロフィール'
+      title: 'プロフィール詳細画面'
+      full_name: 'フルネーム'
+      user_edit: '編集画面へ'
+    edit: 
+      title: 'プロフィール編集画面'
+      avatar: '画像'
+      message:
+        created: '編集に成功しました'
+        not_created: '編集に失敗しました'

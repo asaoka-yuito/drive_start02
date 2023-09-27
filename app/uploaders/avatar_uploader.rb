@@ -21,6 +21,15 @@ class AvatarUploader < CarrierWave::Uploader::Base
   #   "/images/fallback/" + [version_name, "default.png"].compact.join('_')
   # end
 
+  #デフォルト画像の設定
+ def default_url
+  "sample.jpeg"
+ end
+
+  #アップロードファイルの指定
+  def extension_allowlist
+    %w(jpg jpeg gif png)
+  end
   # Process files as they are uploaded:
   # process scale: [200, 300]
   #
