@@ -5,9 +5,9 @@ class ProfilesController < ApplicationController
 
   def update
     if @user.update(user_params)
-      redirect_to profile_path,success: "ユーザーを更新しました"
+      redirect_to profile_path,success: t('profiles.edit.message.created', item: User.model_name.human)
     else
-      flash.now[:danger] = "ユーザーを更新できませんでした"
+      flash.now[:danger] =t('profiles.edit.message.not_created', item: User.model_name.human)
       render :edit
     end
   end

@@ -10,6 +10,7 @@ ja:
       post: '掲示板'
       comment: 'コメント'
       bookmarks: 'ブックマーク'
+      profile: 'プロフィール'
     attributes:
       user:
         email: 'メールアドレス'
@@ -17,10 +18,11 @@ ja:
         password_confirmation: 'パスワード確認'
         last_name: '苗字'
         first_name: '名前'
-        submit: 登録
+        full_name: '氏名'
+        submit: '登録'
+        avatar: '画像'
       user_sessions:
         title: 'パスワードリセット画面'
-        
       post: 
         title: 'タイトル'
         body: '本文'
@@ -32,4 +34,8 @@ ja:
       bookmarks:
         bookmarks:
           no_result: 'ブックマークがありません'    
-    
+      profile:
+        edit:
+          avatar: '画像'
+       
+        
