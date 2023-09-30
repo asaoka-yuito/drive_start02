@@ -1,4 +1,4 @@
-function previewImage() {
+window.previewImage = function(id) {
   const target = this.event.target;
   const file = target.files[0];
   const reader  = new FileReader();
@@ -12,3 +12,6 @@ function previewImage() {
     reader.readAsDataURL(file);
   }
 }
+
+
+console.log("validateImage called");
