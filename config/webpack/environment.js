@@ -8,8 +8,12 @@ environment.plugins.prepend(
   new webpack.ProvidePlugin({
     $: 'jquery/src/jquery',
     jQuery: 'jquery/src/jquery',
+    $: 'admin-lte/plugins/jquery/jquery',
+    jQuery: 'admin-lte/plugins/jquery/jquery',
   })
 )
 environment.loaders.append('sass', sass)
 module.exports = environment
+
+
 

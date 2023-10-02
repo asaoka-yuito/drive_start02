@@ -16,6 +16,7 @@ import '../stylesheets/application.scss'
 import '../stylesheets/admin.scss'
 import '../src/common'
 import '../src/admin.js'
+import 'admin-lte'
 
 
 Rails.start()

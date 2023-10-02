@@ -16,4 +16,4 @@ window.previewImage = function(id) {
 }
 
 
-console.log("validateImage called");
+console.log("プレビューイメージ確認用");
