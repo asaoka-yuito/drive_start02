@@ -21,13 +21,6 @@ Rails.application.routes.draw do
   resource :profile,only: %i[show edit update]
 
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
- 
-  namespace :admin do
-    get 'user_sessions/new'
-  end
-  namespace :admin do
-    get 'dashboards/index'
-  end
 
   # 管理者用
   namespace :admin do
@@ -36,6 +29,6 @@ Rails.application.routes.draw do
     post 'login', to: 'user_sessions#create'
     delete 'logout', to: 'user_sessions#destroy'
     resources :users, only: %i[index show edit update destroy]
-    resources :boards, only: %i[index show edit update destroy]
+    resources :posts, only: %i[index show edit update destroy]
   end
 end
