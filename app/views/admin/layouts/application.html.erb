@@ -7,7 +7,7 @@
     <meta name="robots" content="noindex, nofollow">
     <title><%= page_title(yield(:title), admin: true) %></title>    
     <%= csrf_meta_tags %>
-    <%= stylesheet_pack_tag 'admin', media: 'all' %>  
+    <%= stylesheet_link_tag 'admin', media: 'all' %>  
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
   </head>
 
@@ -27,6 +27,6 @@
     <%= render 'admin/shared/footer' %>  
 
   </div>
-  <%= javascript_pack_tag 'admin' %> 
+  <%= javascript_pack_tag 'application' %> 
   </body>
 </html>

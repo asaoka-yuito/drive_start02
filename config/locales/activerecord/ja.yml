@@ -36,6 +36,9 @@ ja:
           no_result: 'ブックマークがありません'    
       profile:
         edit:
-          avatar: '画像'
-       
-        
+          avatar: '画像'  
+      enums:
+        user:
+          role:
+            general: '一般'
+            admin: '管理者'

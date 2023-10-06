@@ -89,3 +89,6 @@ gem 'kaminari'
 gem 'ransack'
 
 gem 'config'
+
+# enumで定義した値を翻訳するgem
+gem 'enum_help'
