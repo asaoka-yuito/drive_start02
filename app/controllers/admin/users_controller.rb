@@ -1,4 +1,5 @@
-class Admin::UsersController < ApplicationController
+class Admin::UsersController < Admin::BaseController
+    before_action :logged_in_user, only: %i[:index, :edit, :update, :destroy]
     before_action :set_user, only: %i[show edit update destroy]
 
   def index

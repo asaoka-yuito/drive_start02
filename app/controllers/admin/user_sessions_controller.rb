@@ -1,6 +1,6 @@
-class Admin::UserSessionsController < ApplicationController  
+class Admin::UserSessionsController < Admin::BaseController
   skip_before_action :require_login, only: %i[new create]
-  # skip_before_action :check_admin, only: %i[new create]
+  skip_before_action :check_admin, only: %i[new create]
   layout 'admin/layouts/admin_login'        # ログインページ用のレイアウトを用意するので宣言
 
   def new; end

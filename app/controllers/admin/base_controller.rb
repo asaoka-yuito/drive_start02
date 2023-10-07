@@ -1,6 +1,6 @@
-class Admin::BaseController < ApplicationController
-  layout 'admin/layouts/application'    
-  bofore_action :check_admin
+class Admin::BaseController < ApplicationController   
+  before_action :check_admin
+  layout 'admin/layouts/application' 
   
 
 

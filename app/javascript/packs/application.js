@@ -15,12 +15,7 @@ import '@fortawesome/fontawesome-free/js/all'
 import '../stylesheets/application.scss'
 import '../src/common'
 import '../src/admin.js'
-import 'admin-lte'
 
-import 'admin-lte/plugins/datatables/jquery.dataTables.min.js';
-import 'admin-lte/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js';
-import 'admin-lte/plugins/datatables-responsive/js/dataTables.responsive.min.js';
-import 'admin-lte/plugins/datatables-responsive/js/responsive.bootstrap4.min.js';
 
 
 
