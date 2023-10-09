@@ -6,7 +6,7 @@
     <%= user.decorate.full_name %>
   </td>
   <td>
-    <%# <%= user.role_i18n %> %>
+    <%= user.role_i18n %>
   </td>
   <td>
     <%= l user.created_at, format: :long %>
@@ -17,6 +17,3 @@
     <%= link_to t('defaults.delete'), admin_user_path(user), method: :delete, data: { confirm: t('defaults.message.delete_confirm') }, class: 'btn btn-danger' %>
   </td>
 </tr>
-<%# 修正箇所 %>
-<%#  %>
-<%#  %>

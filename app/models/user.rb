@@ -42,4 +42,15 @@ class User < ApplicationRecord
   def bookmark?(post)
     bookmark_posts.include?(post)
   end
+
+  # 検索機能に属性との関連付けを行う
+  
+  def self.ransackable_attributes(auth_object = nil)
+    ["access_count_to_reset_password_page", "avatar", "created_at", "crypted_password", "email", "first_name", "id", "last_name", "reset_password_email_sent_at", "reset_password_token", "reset_password_token_expires_at", "role", "salt", "updated_at"]
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    ["bookmark_posts", "bookmarks", "comments", "posts"]
+  end
+
 end
