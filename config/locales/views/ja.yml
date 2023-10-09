@@ -65,3 +65,20 @@ ja:
       message:
         created: '編集に成功しました'
         not_created: '編集に失敗しました'
+  admin:
+    user_sessions:
+      new:
+        title: '管理者 ログイン'
+    dashboards:
+      index:
+        title: 'ダッシュボード'
+    posts:
+      index:
+        title: '掲示板管理画面'
+    users:
+      index:
+        title: 'ユーザー管理画面'
+      show: 
+        title: 'ユーザー詳細管理画面'
+      edit:
+        title: 'ユーザー設定変更管理画面'

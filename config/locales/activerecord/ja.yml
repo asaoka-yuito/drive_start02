@@ -11,6 +11,7 @@ ja:
       comment: 'コメント'
       bookmarks: 'ブックマーク'
       profile: 'プロフィール'
+      admin: 'アドミン'
     attributes:
       user:
         email: 'メールアドレス'
