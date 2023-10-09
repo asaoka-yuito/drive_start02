@@ -10,4 +10,9 @@ module ApplicationHelper
 
     page_title.empty? ? base_title : page_title + " | " + base_title
   end
+
+  # アクティブ機能
+  def active_if(path)
+    path == controller_path ? 'active' : ''
+end
 end
