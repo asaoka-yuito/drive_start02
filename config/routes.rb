@@ -15,6 +15,7 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :roads
   resources :bookmarks, only: %i[create destroy]
   resources :password_resets, only: %i[new create edit update]
 
