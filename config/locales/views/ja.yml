@@ -65,6 +65,9 @@ ja:
       message:
         created: '編集に成功しました'
         not_created: '編集に失敗しました'
+  roads:
+    new:
+      title: 'ドライブルート投稿画面'
   admin:
     user_sessions:
       new:
