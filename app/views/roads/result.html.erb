@@ -1,0 +1,277 @@
+<div id="road">
+      <strong>Start:</strong>
+      <input id="start" type="text" name="name" required minlength="4" maxlength="8" size="10">
+      <br />
+      <strong>End:</strong>
+      <input id="end" type="text" name="name" required minlength="4" maxlength="8" size="10">
+
+      <input type="button">
+      <div id="map"></div><!-- 地図を表示する領域 -->
+
+    <div id="container">
+      <%# マップの上にテキストボックス表示 %>
+      <div id="sidebar"></div>
+    </div>
+    
+</div>
+
+
+<style>
+    #map {
+        height: 600px;
+        width: 800px;
+        margin: 0 auto;
+    }
+  #floating-panel{
+    height: 70px;
+    width: 250px;
+  }
+  #container{
+     margin: 0 auto;
+     display: flex;
+  }
+  #sidebar{
+    margin: 0 auto;
+  }
+
+  #road{
+    text-align: center;
+  }
+    
+</style>
+
+<script>
+
+  
+    
+  function initMap() {
+  const directionsRenderer = new google.maps.DirectionsRenderer();
+  const directionsService = new google.maps.DirectionsService();
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom:13,
+    center: { lat: 35.6811673, lng: 139.7670516 },
+    disableDefaultUI: true,
+  });
+
+  directionsRenderer.setMap(map);
+  directionsRenderer.setPanel(document.getElementById("sidebar"));
+
+  const control = document.getElementById("floating-panel");
+
+  map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
+
+  const onChangeHandler = function () {
+    calculateAndDisplayRoute(directionsService, directionsRenderer);
+  };
+  
+  document.getElementById("start").addEventListener("change", onChangeHandler);
+  document.getElementById("end").addEventListener("change", onChangeHandler);
+}
+
+function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+  const start = document.getElementById("start").value;
+  const end = document.getElementById("end").value;
+
+  directionsService
+    .route({
+      origin: start,
+      destination: end,
+      travelMode: google.maps.TravelMode.DRIVING,
+    })
+    .then((response) => {
+      directionsRenderer.setDirections(response);
+    })
+    .catch((e) => window.alert("Directions request failed due to " + status));
+    
+}
+
+window.initMap = initMap;
+//     //DirectionsService のオブジェクトを生成
+//     var directionsService = new google.maps.DirectionsService();
+
+//     //DirectionsRenderer のオブジェクトを生成
+//     var directionsRenderer = new google.maps.DirectionsRenderer();
+
+//     //directionsRenderer と地図を紐付け
+//     directionsRenderer.setMap(map);
+
+//     // 経由地の配列を生成（最大8個）
+   
+
+//     // ルートを取得するリクエスト
+//     var request = {
+//       origin: "<%= @start_location %>",      // スタート地点
+//       destination: "<%= @end_location %>",   // ゴール地点
+//       avoidHighways: true, // 高速は利用しない
+//       travelMode: google.maps.TravelMode.DRIVING, // 車モード
+//       optimizeWaypoints: true, // 最適化を有効
+//       waypoints: wayPoints // 経由地
+//     };
+
+// // ルートを検索する
+// function search() {
+//   var points = $('#route-list li');
+
+//   // 2地点以上のとき
+//   if (points.length >= 2){
+//       var origin; // 開始地点
+//       var destination; // 終了地点
+//       var waypoints = []; // 経由地点
+
+//       // origin, destination, waypointsを設定する
+//       for (var i = 0; i < points.length; i++) {
+//           points[i] = new google.maps.LatLng($(points[i]).attr("data-lat"), $(points[i]).attr("data-lng"));
+//           if (i == 0){
+//             origin = points[i];
+//           } else if (i == points.length-1){
+//             destination = points[i];
+//           } else {
+//             waypoints.push({ location: points[i], stopover: true });
+//           }
+//       }
+//       // リクエストの作成
+//       var request = {
+//         origin:      origin,
+//         destination: destination,
+//         waypoints: waypoints,
+//         travelMode:  google.maps.TravelMode.DRIVING
+//       };
+//       // ルートサービスのリクエスト
+//       new google.maps.DirectionsService().route(request, function(response, status) {
+//         if (status == google.maps.DirectionsStatus.OK) {
+//           new google.maps.DirectionsRenderer({
+//             map: map,
+//             suppressMarkers : true,
+//             polylineOptions: { // 描画される線についての設定
+//               strokeColor: '#00ffdd',
+//               strokeOpacity: 1,
+//               strokeWeight: 5
+//             }
+//           }).setDirections(response);//ライン描画部分
+
+//             // 距離、時間を表示する
+//             var data = response.routes[0].legs;
+//             for (var i = 0; i < data.length; i++) {
+//                 // 距離
+//                 var li = $('<li>', {
+//                   text: data[i].distance.text,
+//                   "class": "display-group-item"
+//                 });
+//                 $('#display-list').append(li);
+
+//                 // 時間
+//                 var li = $('<li>', {
+//                   text: data[i].duration.text,
+//                   "class": "display-group-item"
+//                 });
+//                 $('#display-list').append(li);
+//             }
+//             const route = response.routes[0];
+//             // ビューのid='directions-panel'の部分に埋め込む
+//             const summaryPanel = document.getElementById("directions-panel");
+//             summaryPanel.innerHTML = "";
+
+//             // 各地点間の距離・時間を表示
+//             for (let i = 0; i < route.legs.length; i++) {
+//               const routeSegment = i + 1;
+//               summaryPanel.innerHTML +=
+//                 "<b>Route Segment: " + routeSegment + "</b><br>";
+//               summaryPanel.innerHTML += route.legs[i].start_address + "<br>" + " ↓ " + "<br>";
+//               summaryPanel.innerHTML += route.legs[i].end_address + "<br>";
+//               summaryPanel.innerHTML += "<" + route.legs[i].distance.text + ",";
+//               summaryPanel.innerHTML += route.legs[i].duration.text + ">" + "<br>";
+//             }
+//         }
+//       });
+//   }
+// }
+
+
+
+
+//     //DirectionsService のオブジェクトのメソッド route() にリクエストを渡し、
+//     //コールバック関数で結果を setDirections(result) で directionsRenderer にセットして表示
+//     // directionsService.route(request, function(result, status) {
+//     //   //ステータスがOKの場合、
+//     //   if (status === 'OK') {
+//     //     directionsRenderer.setDirections(result); //取得したルート（結果：result）をセット
+//     //     var legs = result.routes[0].legs;
+//     //     var dis = 0;
+//     //     var sec = 0;
+//     //     var waypoints = '';
+//     //     var waypointIndex = 0;
+
+//     //     // 経由地間の距離・時間を表示
+//     //     legs.forEach(function(val) {
+//     //       sec += val.duration.value;
+//     //       dis += val.distance.value;
+
+//     //       waypoints += "<div class='waypoint_div' id='waypoint_div" + waypointIndex + "'>" + " " + val.distance.text + " , " + val.duration.text + "</div>";
+//     //       const waypointElement = document.getElementById("waypoint_output");
+//     //       waypointElement.innerHTML = waypoints;
+//     //       waypointIndex++;
+//     //       });
+
+
+//     //     // Places APIを利用し、入力地点の名称を抽出
+//     //     var placeIds = [];
+//     //     var placeNames = [];
+
+//     //     result.geocoded_waypoints.forEach(function(geocoded_waypoint) {
+//     //       placeIds.push(geocoded_waypoint.place_id);
+//     //     });
+
+//     //     const service = new google.maps.places.PlacesService(map);
+//     //     var placePromises = placeIds.map(function(placeId) {
+//     //       return new Promise(function(resolve, reject) {
+//     //         const placeRequest = {
+//     //           placeId: placeId,
+//     //           fields: ["name", "formatted_address", "place_id", "geometry"],
+//     //         };
+//     //         service.getDetails(placeRequest, (place, status) => {
+//     //           if (status === google.maps.places.PlacesServiceStatus.OK) {
+//     //             resolve(place.name);
+//     //           } else {
+//     //             reject(status);
+//     //           }
+//     //         });
+//     //       });
+//     //     });
+
+//     //     Promise.all(placePromises)
+//     //       .then(function(names) {
+//     //         var waypointIndex = 0;
+//     //         var count_route = 'A'.charCodeAt(0); // 'A' の文字コードを取得
+
+//     //         names.forEach(function(placeName) {
+//     //           var routeLetter = String.fromCharCode(count_route); // 文字コードを文字列に変換
+//     //           var routeLetter2 = String.fromCharCode(++count_route);
+
+//     //           const nameElement = document.getElementById("waypoint_div"+waypointIndex);
+//     //           nameElement.innerHTML = routeLetter + ': ' + names[waypointIndex] + ' ~ ' + routeLetter2 + ': ' + names[waypointIndex+1] + nameElement.innerHTML;
+//     //           waypointIndex++;
+//     //         });
+//     //       })
+//     //       .catch(function(error) {
+//     //         console.log("エラーが発生しました:", error);
+//     //       });
+
+
+//     //     // 時間・距離計算
+//     //     var distanceInKm = (dis / 1000).toFixed(1);
+//     //     var minutes = sec / 60;
+//     //     var hours = Math.floor(minutes / 60);
+//     //     minutes = Math.round(minutes % 60);
+
+//     //     result = "距離：" + distanceInKm + "km, 時間：" + hours + "時間" + minutes + "分";
+//     //     const outputElement = document.getElementById("result_output");
+//     //     outputElement.textContent = result;
+//     //   }else{
+//     //     alert("取得できませんでした：" + status);
+//     //   }
+//     // });
+  
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=<%= ENV['GOOGLE_MAP_API'] %>&callback=initMap&v=weekly" ></script>
+
+
