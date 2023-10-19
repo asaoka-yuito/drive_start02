@@ -14,11 +14,12 @@ import 'bootstrap'
 import '@fortawesome/fontawesome-free/js/all'
 import '../stylesheets/application.scss'
 import '../src/common'
+import '../src/gmap'
 import '../src/admin.js'
 
 
 
 
 Rails.start()
-Turbolinks.start()
+// Turbolinks.start()
 ActiveStorage.start()
