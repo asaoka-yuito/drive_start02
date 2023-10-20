@@ -3,12 +3,8 @@
    <div class="row">
      <div class="col-lg-8 offset-lg-2">
        <h1><%= t('.title') %></h1>
-       <h1>ルート検索機能検証ページ</h1>
        <%= render 'form' %>
+       <%= link_to (t '.to_road_page'), road_search_path %>
      </div>
-   
    </div>
-     <div class="map-search">
-    <%= button_tag "ルート検索", id: "btn-search", class: "btn btn-primary", onclick: "search()" %>
-  </div>
  </div>

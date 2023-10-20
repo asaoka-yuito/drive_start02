@@ -67,7 +67,8 @@ ja:
         not_created: '編集に失敗しました'
   roads:
     new:
-      title: 'ドライブルート投稿画面'
+      title: 'ドライブルート検索画面'
+      to_road_page: 'ルート検索ページへ'
   admin:
     user_sessions:
       new:

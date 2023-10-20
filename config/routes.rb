@@ -15,7 +15,9 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :roads
+  resources :roads, only: %i[index new create show edit update destroy]
+  get 'roadse', to: 'roads#road_search', as: 'road_search'
+
   resources :bookmarks, only: %i[create destroy]
   resources :password_resets, only: %i[new create edit update]
 

@@ -38,6 +38,11 @@
           <% end %>
         </li>
         <li>
+          <%=  link_to new_road_path,class: 'nav-link text-light' do %>
+            <i class="fas fa-star"></i> roads
+          <% end %>
+        </li>
+        <li>
           <%= link_to logout_path, method: :delete,class: 'nav-link text-light' do %>
             <i class="fas fa-sign-out-alt"></i> Log out
           <% end %>
