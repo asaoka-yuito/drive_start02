@@ -1,7 +1,10 @@
 <%# ログイン中 %>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
   <div class="container">
-    <a class="navbar-brand" href="/">Drive Start</a>
+    <a class="navbar-brand" href="/">
+    <i class="fa-solid fa-car-side"></i>
+    Drive Start
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -9,14 +12,15 @@
       <ul class="navbar-nav ml-auto">
         <li>
           <%= link_to root_path,class: 'nav-link text-light' do %>
-            <i class="fas fa-home"></i> Home
+            <i class="fas fa-home"></i> Top
           <% end %>
         </li>
         <li>
           <%# ドロップダウン %>
           <div class="dropdown mt-1">
             <button class="btn btn-whiht text-white btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              ユーザーログイン
+              <i class="fa-solid fa-user"></i>
+              User Login
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <li>
@@ -34,12 +38,12 @@
         </li>
         <li>
           <%=  link_to bookmarks_posts_path,class: 'nav-link text-light' do %>
-            <i class="fas fa-star"></i> bookmarks
+            <i class="fas fa-star"></i> Bookmarks
           <% end %>
         </li>
         <li>
           <%=  link_to new_road_path,class: 'nav-link text-light' do %>
-            <i class="fas fa-star"></i> roads
+            <i class="fa-solid fa-road"></i> Roads
           <% end %>
         </li>
         <li>
