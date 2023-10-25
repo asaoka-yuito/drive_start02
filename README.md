@@ -1,24 +1,18 @@
-# README
+drive_start
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+サービス概要 
 
-* Ruby version
+■メインのターゲットユーザー 20〜30代前半、ペーパードライバー、免許取り立ての方 コロナになり出かける予定がへると運転する機会も減るので純粋にドライブを楽しんでもらう。
 
-* System dependencies
+■ユーザーが抱える課題 車・バイクにのる機会がない、免許を取ったものの行きたいところなどないのでそもそも乗る機会がないなど
 
-* Configuration
+■解決方法 行きたいところがあるから車・バイクに乗るのではなく、運転の練習（車に乗る機会を増やす） アプリを使ってもらい公道での運転に慣れてもらう。
 
-* Database creation
+■実装予定の機能（以下の例は実際のアプリの機能から一部省略しています） ・ユーザー登録 ・ゲストログイン ・天気による運転の変化
 
-* Database initialization
 
-* How to run the test suite
+■なぜこのサービスを作りたいのか？ 自分がバイクの免許を取得した際に職場も遠くなかなか乗る機会がないため乗る機会を作っていきたい。
 
-* Services (job queues, cache servers, search engines, etc.)
+■スケジュール 企画〜技術調査 README〜ER図作成  メイン機能実装：9/30 - 1/30 β版をRUNTEQ内リリース（MVP）：11/28〆切 本番リリース：11月
 
-* Deployment instructions
-
-* ...
