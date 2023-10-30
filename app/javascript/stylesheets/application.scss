@@ -8,17 +8,13 @@
 //  文字を中央寄せ  
 .card-img-overlay{
     padding: 0;
-    // top: calc(25% - 0.5rem);
+    top: calc(25% - 0.5rem);
     text-align: center;
     font-weight: bold;
   }
 .text-black{
+    margin: auto;
     max-width: 250px;
     border-radius: 5px;
     background-color: rgba( 204, 255, 204, 0.55 )
 }
-
-//   文字の背景を半透明に
-// span {
-//     background-color: rgba( 204, 255, 204, 0.55 )
-//  }
