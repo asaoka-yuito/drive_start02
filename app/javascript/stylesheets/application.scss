@@ -2,6 +2,17 @@
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 
 
+@font-face {
+    font-family: "NotoSerifJP";
+    src: url("../fonts/NotoSerifJP-Black.ttf"),url("../fonts/NotoSerifJP-ExtraLight.ttf");
+  } 
+
+
+body{
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 400;
+}
+
 .card-img{
     max-width: 800px;
 }
@@ -13,8 +24,9 @@
     font-weight: bold;
   }
 .text-black{
+    font-size: 25px;
     margin: auto;
-    max-width: 250px;
+    max-width: 300px;
     border-radius: 5px;
     background-color: rgba( 204, 255, 204, 0.55 )
 }

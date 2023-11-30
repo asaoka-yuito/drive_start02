@@ -1,5 +1,5 @@
 <%# ログアウト中 %>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-success">
   <div class="container">
     <a class="navbar-brand" href="/">Drive Start</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -13,8 +13,8 @@
           <% end %>
         </li>
         <li>
-          <%= link_to root_path,class: 'nav-link text-light' do %>
-            <i class="fas fa-link"></i> About
+          <%=  link_to new_road_path,class: 'nav-link text-light' do %>
+            <i class="fa-solid fa-road"></i> Roads
           <% end %>
         </li>
         <li>

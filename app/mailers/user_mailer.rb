@@ -5,6 +5,7 @@ class UserMailer < ApplicationMailer
   #
   #   en.user_mailer.reset_password_email.subject
   #
+  # パスワードリセット修正必要箇所
   def reset_password_email
     # メールの送信元のアドレスを指定できる
     default from: 'from@example.com'
