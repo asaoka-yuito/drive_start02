@@ -4,7 +4,7 @@
 // that code so it'll be compiled.
 
 import Rails from "@rails/ujs"
-// import Turbolinks from "turbolinks"
+import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
@@ -13,7 +13,7 @@ import 'popper.js'
 import 'bootstrap'
 import '@fortawesome/fontawesome-free/js/all'
 import '../stylesheets/application.scss'
-import '../src/common'
+import '../src/common.js'
 import '../src/gmap'
 import '../src/admin.js'
 
@@ -22,5 +22,5 @@ import '../src/admin.js'
 
 
 Rails.start()
-// Turbolinks.start()
+Turbolinks.start()
 ActiveStorage.start()
