@@ -4,8 +4,11 @@
       <input id="start" type="text" name="name" required minlength="4" maxlength="8" size="10">
       <strong>End:</strong>
       <input id="end" type="text" name="name" required minlength="4" maxlength="8" size="10">
-      <div id="map"></div><!-- 地図を表示する領域 -->
 
+      <input type="button" value="ルート案内開始" id="roadStart">
+
+      <div id="map"></div><!-- 地図を表示する領域 -->
+      <h2>登録ボタン設置予定</h2>
     <div id="container">
       <%# マップの上にテキストボックス表示 %>
       <div id="sidebar"></div>
@@ -39,6 +42,9 @@
 
 <script>
     
+  
+
+  // google-map
   function initMap() {
   const directionsRenderer = new google.maps.DirectionsRenderer();
   const directionsService = new google.maps.DirectionsService();
@@ -55,12 +61,17 @@
 
   map.controls[google.maps.ControlPosition.TOP_CENTER].push(control);
 
-  const onChangeHandler = function () {
+  // ルート案内開始ボタン
+  function buttonClick(){
+    alert('検索開始');
     calculateAndDisplayRoute(directionsService, directionsRenderer);
-  };
+  }
+
+  let button = document.getElementById('roadStart');
+  button.addEventListener('click', buttonClick);
   
-  document.getElementById("start").addEventListener("values", onChangeHandler);
-  document.getElementById("end").addEventListener("change", onChangeHandler);
+  document.getElementById("start").addEventListener("values", butotnClick);
+  document.getElementById("end").addEventListener("values", butotnClick);
 }
 
 function calculateAndDisplayRoute(directionsService, directionsRenderer) {
@@ -76,9 +87,11 @@ function calculateAndDisplayRoute(directionsService, directionsRenderer) {
     .then((response) => {
       directionsRenderer.setDirections(response);
     })
-    .catch((e) => window.alert("Directions request failed due to " + status));
+    .catch((e) => window.alert("ルートリクエストは次の理由で失敗しました。" + status));
     
 }
+
+
 
 window.initMap = initMap;
   
