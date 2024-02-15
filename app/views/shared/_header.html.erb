@@ -20,12 +20,13 @@
           <div class="dropdown mt-1">
             <button class="btn btn-whiht text-white btn-sm dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fa-solid fa-user"></i>
-              User Login
+              User Menu
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
               <li>
                 <%= link_to current_user.decorate.full_name , profile_path, class: 'dropdown-item' %>
               </li>
+              
               <li>
                 <%= link_to t('posts.index.title'), posts_path, class: 'dropdown-item' %>
               </li>
