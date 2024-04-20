@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   mount_uploader :avatar, AvatarUploader
 
+  # カラムではなくrole で付与しているのでroleを操作して権限を与える
   enum role: { general: 0, admin: 1 }
   
 

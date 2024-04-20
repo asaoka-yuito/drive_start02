@@ -42,14 +42,19 @@
   
 
 // google-map
-function initMap() {
+async function initMap() {
   const directionsRenderer = new google.maps.DirectionsRenderer();
   const directionsService = new google.maps.DirectionsService();
-  const map = new google.maps.Map(document.getElementById("map"), {
+  //@ts-ignore
+  const { Map } = await google.maps.importLibrary("maps");
+
+  map = new Map(document.getElementById("map"), {
     zoom:13,
     center: { lat: 35.6811673, lng: 139.7670516 },
     disableDefaultUI: true,
   });
+
+  
 
   directionsRenderer.setMap(map);
   directionsRenderer.setPanel(document.getElementById("sidebar"));
