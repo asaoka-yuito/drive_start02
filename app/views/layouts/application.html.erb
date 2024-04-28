@@ -2,7 +2,7 @@
 <html>
   <head>
     <title><%= page_title(yield(:title)) %></title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= include_gon %>
@@ -18,7 +18,7 @@
       <%= render 'shared/before_login_header' %><%# ログアウト中 %>
     <% end %> 
 
-     <%# フラッシュメッセージ  %>
+    <%# フラッシュメッセージ  %>
     <%= render 'shared/flash_message' %>
 
     <%= yield %>

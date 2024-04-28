@@ -2,6 +2,29 @@
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 
 
+// 現段階ではデスクトップファースト（max-widthの記述で順番が大きい数字が上からになる）
+
+// タブレット用, 960px以下が適用
+@media (max-width: 960px) {
+  body{
+    color:blue;
+  }
+  .title {
+    font-size: 30px;
+  }
+}
+
+// モバイル用, 480px以下が適用
+@media (max-width: 480px) { 
+  body{
+    color:red;
+    font-size: 1rem;
+  }
+  .title {
+    font-size: 30px;
+  }
+}
+
 @font-face {
     font-family: "NotoSerifJP";
     src: url("../fonts/NotoSerifJP-Black.ttf"),url("../fonts/NotoSerifJP-ExtraLight.ttf");
@@ -13,6 +36,9 @@ body{
     font-weight: 400;
 }
 
+.title{
+  text-align: center;
+}
 .card-radius{
   border-radius: 15px;
 }
