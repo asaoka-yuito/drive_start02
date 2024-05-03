@@ -1,6 +1,8 @@
 @import '~bootstrap/scss/bootstrap.scss';
 @import '@fortawesome/fontawesome-free/scss/fontawesome';
 
+.pc { display: block !important; }
+.sp { display: none !important; }
 
 // 現段階ではデスクトップファースト（max-widthの記述で順番が大きい数字が上からになる）
 
@@ -16,14 +18,38 @@
 
 // モバイル用, 480px以下が適用
 @media (max-width: 480px) { 
+  .pc { display: none !important; }
+  .sp { display: block !important; }
+
+
+
   body{
     color:red;
     font-size: 1rem;
   }
   .title {
-    font-size: 30px;
+    font-size: 1.5rem;
+  }
+
+  .top{
+    margin-top: 10px;
+  }
+
+  .top-bottom{
+    padding: 10px 0px;
+
+  }
+
+  .center{
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .float-sp{
+    text-align: center;
   }
 }
+
 
 @font-face {
     font-family: "NotoSerifJP";

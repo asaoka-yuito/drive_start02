@@ -3,7 +3,7 @@
 <div class="container pt-3">
   <div class="row">
 	<div class="col-lg-10 offset-lg-1">
-      <h1><%= t '.title' %></h1>
+      <h1 class="title"><%= t '.title' %></h1>
       <table class="table">
         <tr>
           <th scope="row"><%= t(User.human_attribute_name(:email)) %></th>
@@ -18,7 +18,8 @@
           <td><%= image_tag current_user.avatar.url, class: 'rounded-circle', size: '50x50' %></td>
         </tr>
       </table>
-      <%= link_to (t '.user_edit'), edit_profile_path, class: 'float-right' %>
+      <%= link_to (t '.user_edit'), edit_profile_path, class: 'float-right pc' %>
+      <%= link_to (t '.user_edit'), edit_profile_path, class: 'float-sp sp' %>
     </div>
   </div> 
 </div>

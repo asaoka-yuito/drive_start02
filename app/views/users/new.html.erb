@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-md-10 offset-md-1 col-lg-8 offset-lg-2">
       <%# model が渡されているので追加情報は必要ない。 %>
-      <h1><%= t '.title' %></h1>
+      <h1 class="title top"><%= t '.title' %></h1>
       <%= form_with model: @user, local: true do |f| %>
         <%= render 'shared/error_messages', object: f.object %>
         <div class="form-group">
@@ -26,13 +26,13 @@
           <%= f.label :password_confirmation %>
           <%= f.password_field :password_confirmation, class: "form-control" %>
         </div> 
-        <div class="actions">
+        <div class="actions center">
           <%= f.submit class: "btn btn-primary" %>
         </div> 
-     <% end %>
-     <div class='text-center'>
-       <%= link_to 'ログインページへ', login_path %>
-     </div>
+      <% end %>
+      <div class='text-center'>
+        <%= link_to 'ログインページへ', login_path %>
+      </div>
     </div>
   </div>
 </div>

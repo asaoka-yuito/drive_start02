@@ -6,7 +6,7 @@
       <%# 違反ノードが出るため一時的に無効化 %>
       <%# <%= f.label :body %>
       <%= f.text_area :body, class: 'form-control mb-3', row: 4,  placeholder: Comment.human_attribute_name(:body), id: 'js-new-comment-body' %>
-      <%= f.submit t('defaults.post'), class: 'btn btn-primary' %>
+      <div class="center"><%= f.submit t('defaults.post'), class: 'btn btn-primary' %></div>
     <% end %>
   </div>
 </div>
